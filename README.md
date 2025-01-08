@@ -4,4 +4,3 @@
 
   Demonstates use of RealityKit Portal component.
   
-# RealityKit-sample-portal
