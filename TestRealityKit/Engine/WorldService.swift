@@ -15,9 +15,7 @@ final class WorldService {
     
     private weak var portalWorld: Entity!
     
-    lazy var hPlaneAnchorEntity: AnchorEntity = {  /*AnchorEntity(.plane(.horizontal,
-                                                    classification: .any,
-                                                    minimumBounds: .init(repeating: 0.1)) */ /*.init(world: .zero) */
+    lazy var hPlaneAnchorEntity: AnchorEntity = { 
        let result = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: .init(repeating: 0.1)), trackingMode: .once)
         result.name = "rootEntity"
        return result
@@ -60,14 +58,6 @@ final class WorldService {
         }
         
         scene.addAnchor(hPlaneAnchorEntity)
-        /*if octopus.parent != portalWorld {
-            octopus.removeFromParent(preservingWorldTransform: true)
-        }
-        
-        hPlaneAnchorEntity.addChild(octopus)
-        scene.addAnchor(hPlaneAnchorEntity)*/
-        
-        //octopus.playFadeOpacityAnimation(from: 0, to: 1, duration: 0.5)
         return true
     }
     
